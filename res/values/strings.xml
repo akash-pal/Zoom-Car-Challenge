@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zoom</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_booking_history">Booking History</string>
+    <string name="title_single_menu_item_activity">Booking Details</string>
+    
+
+</resources>

@@ -1,0 +1,128 @@
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content" 
+  android:orientation="horizontal"
+  android:padding="5dip">
+    
+  <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"      
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dip" >
+      
+    <ImageView 
+        android:id="@+id/image"
+        android:layout_width="150dip"
+        android:layout_height="100dip"
+        android:src="@drawable/ic_photo_black_24dp" />   
+           
+  </LinearLayout>
+  
+  
+		      <!-- Name Label -->
+		  
+		  <TextView
+		      android:id="@+id/name_label"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:textColor="#43bd00"
+		      android:textSize="22dip"      
+		      android:layout_toRightOf="@+id/thumbnail" />
+		
+		  <!-- Rate Label -->
+		  <TextView 
+		      android:id="@+id/rate_label"      
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:layout_below="@id/name_label"
+		      android:textSize="15dip"
+		      android:textColor="#acacac"
+		      android:layout_toRightOf="@+id/thumbnail"
+		      android:paddingRight="10dip"/>
+	      
+		  
+		    <RatingBar
+			    android:id="@+id/ratingBar2"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    style="?android:attr/ratingBarStyleSmall"
+			    android:stepSize="0.1"
+			    android:max="5"
+			    android:isIndicator="true" 
+			    android:clickable="false" 
+			    android:layout_toRightOf="@+id/rate_label"
+			    android:layout_below="@+id/name_label"/>
+			
+		     		  	  
+             <TextView
+		      android:id="@+id/seater_label"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:textSize="15dip"      
+		      android:layout_toRightOf="@+id/thumbnail"
+		      android:layout_below="@+id/rate_label" />
+             
+             <TextView
+		      android:id="@+id/ac_label"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:textSize="15dip"      
+		      android:layout_toRightOf="@+id/thumbnail"
+		      android:layout_below="@+id/seater_label" />
+             
+             
+		
+    
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="Car Location"
+        android:textSize="15dip"
+        android:id="@+id/label"
+        android:layout_below="@+id/thumbnail"
+        android:gravity="center"/>
+    
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:layout_below="@+id/label"/>
+
+    <TextView
+        android:id="@+id/datetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickuplabel" />
+
+    <Button
+        android:id="@+id/bookingHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map"
+        android:layout_alignParentRight="true"
+        android:text="Booking History" 
+        android:onClick="bookingHistory"/>
+    <Button
+        android:id="@+id/book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bookingHistory"
+        android:text="Book"
+        android:onClick="book" />
+
+    <TextView
+        android:id="@+id/pickuplabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bookingHistory"
+        android:layout_alignBottom="@+id/bookingHistory"
+        android:layout_alignLeft="@+id/datetxt"
+        android:text="Pickup Date"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/book_thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip" >
+      
+    <ImageView 
+        android:id="@+id/book_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_photo_black_24dp" /> 
+            
+  </LinearLayout>
+  
+      
+  
+<LinearLayout  
+      android:id="@+id/book_details"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@+id/book_thumbnail"
+      android:orientation="vertical"
+      android:paddingTop="16dp">
+      
+		      <!-- Name Label -->
+		  
+		  <TextView
+		      android:id="@+id/book_name_label"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:textColor="#43bd00"
+		      android:textSize="15dip"
+		      android:textStyle="bold" />
+		
+		  <!--  Booked on -->
+		  <TextView 
+		      android:id="@+id/booked_label"      
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_below="@id/book_name_label"
+		      android:textSize="10dip"
+		      android:textColor="#acacac"/>
+		  
+		     
+  </LinearLayout>
+  
+    
+</RelativeLayout>
